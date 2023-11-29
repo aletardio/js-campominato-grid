@@ -1,7 +1,14 @@
 // Creazione del pulsante che genera la griglia di gioco
 const button = document.querySelector('#generate-button');
-
+// Variabile di stato per verificare se la griglia è già stata generata
+let gridGenerated = false; 
 button.addEventListener('click', function() {
+    // Se la griglia è già stata generata, esce dalla funzione
+    if(gridGenerated) {
+        return;
+    }
+    gridGenerated = true;
+
     // Ottiene il riferimento al contenitore della griglia
     const grid = document.getElementById('grid');
     
@@ -19,14 +26,17 @@ button.addEventListener('click', function() {
     }
 })
 
-
 // Funzione che permette di creare la singola casella della griglia
 function createCell (num) {
+
+    
     const element = document.createElement('div');
     element.classList.add('square');
     element.innerText = num;
-
+    
+    
     return element;
+
 }
 
 
