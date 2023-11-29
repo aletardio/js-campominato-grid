@@ -3,3 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    background-color: #fff;
+}
+
+.logo {
+    width: 10%;
+}
+
+#play-btn {
+    border: 1px solid grey;
+    padding: 3px 45px;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #7FFFD4;
+}
+
+footer {
+    background-color: #fff;
+}
