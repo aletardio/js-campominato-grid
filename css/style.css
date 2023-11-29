@@ -12,6 +12,15 @@ header {
     width: 10%;
 }
 
+select#difficulty {
+    background-color: #f0eeef;
+    margin: 0 10px;
+    border: 1px solid grey;
+    padding: 4px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #generate-button {
     border: 1px solid grey;
     padding: 3px 45px;
