@@ -9,6 +9,11 @@ button.addEventListener('click', function() {
     for (let i=0; i<100; i++) {
         // Creazione della singola cella
         let square = createCell(i+1);
+        // Al click la cella cambierà di colore e la console emette il numero della cella
+        square.addEventListener('click', function(){
+            this.classList.toggle('clicked');
+            console.log(square);
+        })
         // Appendo la cella alla griglia
         grid.appendChild(square);
     }

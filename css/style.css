@@ -42,6 +42,10 @@ main {
     align-items: center;
 }
 
+.clicked {
+    background-color: #fff;
+}
+
 footer {
     height: 80px;
     background-color: #fff;
