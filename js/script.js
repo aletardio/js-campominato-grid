@@ -14,4 +14,7 @@ const grid = document.getElementById('grid');
 for (let i=0; i<100; i++) {
     // Creazione della singola cella
     let square = createCell(i+1);
+
+    grid.appendChild(square);
+
 }
