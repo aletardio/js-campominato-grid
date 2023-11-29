@@ -1,7 +1,19 @@
-// Creazione del pulsante e collegamento al DOM
-const generateButton = document.getElementById('generate-button');
+// Creazione del pulsante che genera la griglia di gioco
+const button = document.querySelector('#generate-button');
 
-generateButton.addEventListener('click', createCell());
+button.addEventListener('click', function() {
+    // Ottiene il riferimento al contenitore della griglia
+    const grid = document.getElementById('grid');
+    
+    // Definire un ciclo for per la realizzazione delle celle da 1 a 100
+    for (let i=0; i<100; i++) {
+        // Creazione della singola cella
+        let square = createCell(i+1);
+        // Appendo la cella alla griglia
+        grid.appendChild(square);
+    }
+})
+
 
 // Funzione che permette di creare la singola casella della griglia
 function createCell (num) {
@@ -12,15 +24,4 @@ function createCell (num) {
     return element;
 }
 
-// Recupero l'elemento che contiene la griglia
-const grid = document.getElementById('grid');
 
-
-// Definire un ciclo for per la realizzazione delle celle da 1 a 100
-for (let i=0; i<100; i++) {
-    // Creazione della singola cella
-    let square = createCell(i+1);
-
-    grid.appendChild(square);
-
-}

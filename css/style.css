@@ -16,10 +16,15 @@ header {
     border: 1px solid grey;
     padding: 3px 45px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 body {
     background-color: #7FFFD4;
+}
+
+main {
+    height: 1000px;
 }
 
 #grid {
