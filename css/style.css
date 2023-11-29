@@ -46,6 +46,14 @@ main {
     background-color: #fff;
 }
 
+.square span {
+    opacity: 0;
+}
+
+.square.clicked span {
+    opacity: 1;
+}
+
 footer {
     height: 80px;
     background-color: #fff;

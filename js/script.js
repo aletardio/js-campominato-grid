@@ -32,7 +32,11 @@ function createCell (num) {
     
     const element = document.createElement('div');
     element.classList.add('square');
-    element.innerText = num;
+
+    const span = document.createElement('span');
+    span.innerText = num; 
+
+    element. appendChild(span);
     
     
     return element;
