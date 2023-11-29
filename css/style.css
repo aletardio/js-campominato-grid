@@ -12,7 +12,7 @@ header {
     width: 10%;
 }
 
-#play-btn {
+#generate-button {
     border: 1px solid grey;
     padding: 3px 45px;
     border-radius: 5px;
