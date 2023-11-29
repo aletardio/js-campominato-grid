@@ -6,3 +6,12 @@ function createCell (num) {
 
     return element;
 }
+
+// Recupero l'elemento che contiene la griglia
+const grid = document.getElementById('grid');
+
+// Definire un ciclo for per la realizzazione delle celle da 1 a 100
+for (let i=0; i<100; i++) {
+    // Creazione della singola cella
+    let square = createCell(i+1);
+}
