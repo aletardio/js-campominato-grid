@@ -37,7 +37,7 @@ main {
 }
 
 #grid {
-    width: 1000px;
+    width: 900px;
     flex-wrap: wrap;
 }
 
@@ -52,7 +52,7 @@ main {
 }
 
 .clicked {
-    background-color: #fff;
+    background-color: lightskyblue;
 }
 
 .square span {
