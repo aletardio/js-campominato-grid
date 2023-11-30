@@ -9,7 +9,7 @@ function createPlayGround(totalCells, cellsPerSide) {
             // Al click la cella cambierà di colore e la console emette il numero della cella
             square.addEventListener('click', function(){
                 this.classList.toggle('clicked');
-                console.log(square);
+                console.log(this.innerText);
             })
             // Appendo la cella alla griglia
             grid.appendChild(square);
