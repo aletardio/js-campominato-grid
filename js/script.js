@@ -1,3 +1,41 @@
+document.getElementById('generate-button').addEventListener('click', function(){
+    createNewGame();
+})
+
+// Funzione che mi genera la griglia in base al livello di difficoltà selezionato
+function createNewGame() {
+    document.getElementById('grid').innerHTML = '';
+
+    let levelSelector = document.getElementById('difficulty');
+    let level = parseInt(levelSelector.value);
+
+    let cellsNumber; 
+    let cellsPerSide;
+
+    // Determinazione delle caselle per livello
+    switch(level) {
+        case 1: 
+            cellsNumber = 100; 
+            cellsPerSide = 10; 
+            break;
+
+        case 2: 
+            cellsNumber = 81; 
+            cellsPerSide = 9; 
+            break;
+
+        case 3: 
+            cellsNumber = 49; 
+            cellsPerSide = 7; 
+            break;
+        default: 
+            cellsNumber = 100; 
+            cellsPerSide = 10;
+    }
+
+    createPlayGround(cellsNumber, cellsPerSide);
+}
+
 function createPlayGround(totalCells, cellsPerSide) {
 
         // Ottiene il riferimento al contenitore della griglia
@@ -43,54 +81,5 @@ function createCell (num, numPerSide) {
 
 }
 
-// Funzione che mi genera la griglia in base al livello di difficoltà selezionato
-function createNewGame() {
-    document.getElementById('grid').innerHTML = '';
 
-    let levelSelector = document.getElementById('difficulty');
-    let level = parseInt(levelSelector.value);
-
-    let cellsNumber; 
-    let cellsPerSide;
-
-    // Determinazione delle caselle per livello
-    switch(level) {
-        case 1: 
-            cellsNumber = 100; 
-            cellsPerSide = 10; 
-            break;
-
-        case 2: 
-        cellsNumber = 81; 
-        cellsPerSide = 9; 
-            break;
-
-        case 3: 
-        cellsNumber = 49; 
-        cellsPerSide = 7; 
-            break;
-        default: 
-            cellsNumber = 100; 
-            cellsPerSide = 10;
-
-    }
-
-    createPlayGround(cellsNumber, cellsPerSide);
-}
-
-// // Creazione del pulsante che genera la griglia di gioco
-// const button = document.querySelector('#generate-button');
-// // Variabile di stato per verificare se la griglia è già stata generata
-// let gridGenerated = false; 
-// button.addEventListener('click', function() {
-//     // Se la griglia è già stata generata, esce dalla funzione
-//     if(gridGenerated) {
-//         return;
-//     }
-//     gridGenerated = true;
-// })
-
-document.getElementById('generate-button').addEventListener('click', function(){
-    createNewGame();
-})
 
